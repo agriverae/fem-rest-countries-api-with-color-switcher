@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterContainer = createContainerFilter(createInput(), createSelect());
     main.innerHTML = filterContainer;
     main.appendChild(cardsContainer);
-    cardsContainer.textContent = 'Loading, nigga'
+    cardsContainer.textContent = 'Loading'
 
     if(!countriesLoaded){
       countries = await getAllCountries();
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const loadCountryDetailUI = async (code) => {
     const main = document.querySelector('main');
-    main.textContent = 'Loading, nigga';
+    main.textContent = 'Loading';
     const countryInfo = await getCountryInfo(code);
 
     main.innerHTML = createDetailCountryInfo(countryInfo);
